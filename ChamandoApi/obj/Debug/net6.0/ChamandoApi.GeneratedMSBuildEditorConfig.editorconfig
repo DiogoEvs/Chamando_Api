@@ -19,6 +19,14 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/diogo/source/repos/ChamandoApi/ChamandoApi/Pages/Adicionar.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRpY2lvbmFyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/diogo/source/repos/ChamandoApi/ChamandoApi/Pages/Autenticar.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0ZW50aWNhci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/diogo/source/repos/ChamandoApi/ChamandoApi/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -29,6 +37,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/diogo/source/repos/ChamandoApi/ChamandoApi/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/diogo/source/repos/ChamandoApi/ChamandoApi/Pages/ListarAeronaves.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGlzdGFyQWVyb25hdmVzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/diogo/source/repos/ChamandoApi/ChamandoApi/Pages/ListarUsuarios.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGlzdGFyVXN1YXJpb3MucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/diogo/source/repos/ChamandoApi/ChamandoApi/Shared/SurveyPrompt.razor]
