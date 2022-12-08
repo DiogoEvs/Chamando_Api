@@ -1,0 +1,54 @@
+﻿@page "/listaraeronaves"
+@inject HttpClient aero
+@using Newtonsoft.Json
+@using Data
+
+<div class="container-fluid">
+	<div class="row justify-content-center" style="margin-bottom:50px">
+		<h3 class="text-center">Lista de Aeronaves</h3>
+	</div>
+	<div class="row" style="margin:25px;">
+		<strong>Aeronaves cadastradas</strong> <hr />
+		@if (Users != null)
+		{
+			<table class="table table-bordered table-striped">
+				<thead class="thead-dark">
+					<tr>
+						<th>Id</th>
+						<th>Modelo</th>
+						<th>Código</th>
+					</tr>
+				</thead>
+				<tbody>
+					@foreach (var list in Users)
+					{
+						<tr class="justify-content-center">
+							<td>@list.Id</td>
+							<td>@list.Modelo</td>
+							<td>@list.Codigo</td>
+						</tr>
+					}
+				</tbody>
+			</table>
+		}
+	</div>
+	<div class="row" style="margin:10px; margin-bottom:50px;">
+		<div class="col"><button class="btn btn-info" @onclick="GetUser">Listar Aeronaves</button></div>
+	</div>
+</div>
+
+@code {
+	List<ListarAeronave>? Users;
+	private async void GetUser()
+	{
+		var apiAero = "http://diogoestudante-001-site1.gtempurl.com/api/aeronaves";
+		var httpLista = await aero.GetAsync(apiAero);
+		if (httpLista.IsSuccessStatusCode)
+		{
+			Users = new List<ListarAeronave>();
+			var apiListar = await httpLista.Content.ReadAsStringAsync();
+			Users = JsonConvert.DeserializeObject<List<ListarAeronave>>(apiListar);
+			StateHasChanged();
+		}
+	}
+}
