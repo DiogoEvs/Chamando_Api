@@ -1,6 +1,6 @@
 Para executar essa aplicação foram utilizadas as seguintes tecnologias:
 
-* ![](https://img.shields.io/badge/-.NET6%20-green)
+* ![](https://img.shields.io/badge/-.NET6%20-brightgreen)
 * ![](https://img.shields.io/badge/-NewSoft.JSON%20v6-yellow)
 * ![](https://img.shields.io/badge/-Blazor-blueviolet)
 
