@@ -1,0 +1,47 @@
+@page "/adicionarusuario"
+@inject HttpClient post
+@using Newtonsoft.Json
+@using Data
+
+<h3 class="text-center">Adicionar</h3>
+
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Usuário:</label>
+  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nome" @bind="postUsuario">
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label">Senha:</label>
+  <input type="password" class="form-control" id="inputPassword2" placeholder="Senha" @bind="postSenha">
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label">Data de Criação:</label>
+  <input type="date" class="form-control" id="inputPassword2" placeholder="Data de Criação" @bind="postData">
+</div>
+<div class="col-3" style="margin-top: 10px;">
+  <button type="submit" class="btn btn-primary mb-6" @onclick="CadastrarUsuario">Cadastrar Usuário</button>
+</div>
+
+@mensagem
+
+@code {
+
+  private string? mensagem;
+  private string? postUsuario;
+  private string? postSenha;
+  private DateTime postData;
+
+  Login add = new Login();
+
+  private async Task CadastrarUsuario()
+  {
+    
+    add.Usuario = postUsuario;
+    add.Senha = postSenha;
+    add.DataCriacao = postData;
+
+    var apiName = await post.PostAsJsonAsync<Login>("http://diogoestudante-001-site1.gtempurl.com/api/login", add);
+
+    mensagem = $"Usuário e Senha cadastrados com sucesso!{postUsuario}{postSenha}Data de Cadastramento{postData}.";
+  }
+
+}
