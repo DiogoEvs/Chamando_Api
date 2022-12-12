@@ -1,5 +1,6 @@
 @page "/adicionarusuario"
 @inject HttpClient post
+@using VoeAirlines_Blazor.Data
 @using Newtonsoft.Json
 @using Data
 
@@ -41,7 +42,7 @@
 
     var apiName = await post.PostAsJsonAsync<Login>("http://diogoestudante-001-site1.gtempurl.com/api/login", add);
 
-    mensagem = $"Usuário e Senha cadastrados com sucesso!{postUsuario}{postSenha}Data de Cadastramento{postData}.";
+    mensagem = $"Usuário e Senha cadastrados com sucesso! {postUsuario} {postSenha} Data de Cadastramento {postData}.";
   }
 
 }

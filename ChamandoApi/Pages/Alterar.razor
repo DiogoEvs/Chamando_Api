@@ -1,25 +1,56 @@
 @page "/alterar"
 @inject HttpClient put
+@inject MicroLabs.Pages.Services.AppData Lista
+@using VoeAirlines_Blazor.Data
 @using Newtonsoft.Json
 @using Data
 
-<h3 class="text-center">Alterar</h3>
+<!--<h3 class="text-center">Alterar</h3>
 
 <div class="col-3">
-    Usuário:<input type="text" class="form-control" id="inputPassword2" placeholder="Email">
+    Id:<input type="number" class="form-control" id="inputPassword2" placeholder="Id" @bind="putId">
+</div>
+<div class="col-3">
+    Usuário:<input type="text" class="form-control" id="inputPassword2" placeholder="Nome" @bind="putNome">
 </div>
 
 <div class="col-3">
-    Senha:<input type="password" class="form-control" id="inputPassword2" placeholder="Senha">
+    Senha:<input type="password" class="form-control" id="inputPassword2" placeholder="Senha" @bind="putSenha">
+</div>
+<br>
+<div class="mb-3">
+    <input type="date" class="form-control" id="inputPassword2" placeholder="Data de Alteração" @bind="putData">
 </div>
 
 <div class="col-3" style="margin-top:10px;">
-    <button type="submit" class="btn btn-primary mb-6">confirmar acesso</button>
-
+    <button type="submit" class="btn btn-primary mb-6" @onclick="()=>AlterarUsuario(putId, putNome, 
+    putSenha, putData)">confirmar acesso</button>
 </div>
+
+
 
 @code {
 
-}
+    /*private string? mensagem;
+    private int putId;
+    private string? putNome;
+    private string? putSenha;
+    private DateTime putData;
 
-<h1 class="text-center">Em processo de manutenção...</h1>
+    Login alterar = new Login();
+    public override async void AlterarUsuario(int id)
+    {
+
+        alterar.Id = putId;
+        alterar.Usuario = putNome;
+        alterar.Senha = putSenha;
+        alterar.DataCriacao = putData;
+
+        var apiName = $"http://diogoestudante-001-site1.gtempurl.com/api/login/{id}";
+        var httpResponse = await put.PutAsync(apiName);
+        if(httpResponse.IsSuccessStatusCode)
+        {
+            mensagem = $"Usuário atualizado com sucesso!{putId}_{putNome}_{putSenha}_{putData}";
+        }
+    }*/
+}-->

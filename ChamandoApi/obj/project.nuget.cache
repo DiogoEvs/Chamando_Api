@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/ui6wIJqEXZ0jI10q3eipccuiqnyC8mGj3CgKQDzuY05FyEymYkm2gA7frhTVPOEzi4ophfnOpy9obmTKI9epw==",
+  "dgSpecHash": "d3AMueqPkZrU+6ucwjsZ/jpwA1vkwwgBRoMf9FQvbjaCW0ppYFZnK0L7HAXPDn/2sDPBEUqyC2gSTSnGSxYXeQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\diogo\\source\\repos\\ChamandoApi\\ChamandoApi\\ChamandoApi.csproj",
+  "projectFilePath": "C:\\Users\\diogo\\Documents\\Projetos VSCode\\Chamando_Api\\Chamando_Api\\ChamandoApi\\ChamandoApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\diogo\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\6.0.11\\microsoft.aspnetcore.jsonpatch.6.0.11.nupkg.sha512",
     "C:\\Users\\diogo\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\6.0.11\\microsoft.aspnetcore.mvc.newtonsoftjson.6.0.11.nupkg.sha512",

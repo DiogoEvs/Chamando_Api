@@ -1,5 +1,6 @@
 @page "/listarusuarios"
 @inject HttpClient client
+@using VoeAirlines_Blazor.Data
 @using Newtonsoft.Json
 @using Data
 
@@ -15,6 +16,7 @@
 			<table class="table table-bordered table-striped">
 				<thead class="thead-dark">
 					<tr>
+						<th>Id</th>
 						<th>Usuario</th>
 						<th>Data Criação</th>
 					</tr>
@@ -23,6 +25,7 @@
 					@foreach (var user in Users)
 					{
 						<tr class="justify-content-center">
+							<td>@user.Id</td>
 							<td>@user.Usuario</td>
 							<td>@user.DataCriacao</td>
 						</tr>

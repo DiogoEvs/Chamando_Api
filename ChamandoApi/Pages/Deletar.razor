@@ -1,24 +1,36 @@
 @page "/deletar"
 @inject HttpClient delet
+@using VoeAirlines_Blazor.Data
 @using Newtonsoft.Json
 @using Data
 
 <h3 class="text-center">Deletar</h3>
 
 <div class="col-3">
-    Usuário:<input type="text" class="form-control" id="inputPassword2" placeholder="Nome">
-</div>
-
-<div class="col-3">
-    Senha:<input type="password" class="form-control" id="inputPassword2" placeholder="Senha">
+    Id:<input type="number" class="form-control" id="inputPassword2" placeholder="Id do Usuário" @bind="deletUsuario">
 </div>
 
 <div class="col-3" style="margin-top:10px;">
-    <button type="submit" class="btn btn-primary mb-6">confirmar acesso</button>
-
+    <button type="submit" class="btn btn-danger" @onclick="()=>DeletarUsuario(deletUsuario)">confirmar</button>
 </div>
 
+@mensagem
 @code {
+    private string? mensagem;
+    private int deletUsuario;
+    Login delete = new Login();
+    private async Task DeletarUsuario(int id)
+    {
+        delete.Id = deletUsuario;
 
+        /*await delet.DeleteAsync("http://diogoestudante-001-site1.gtempurl.com/api/login"
+        + Convert.ToInt32(deletUsuario));*/
+
+        var apiName = $"http://diogoestudante-001-site1.gtempurl.com/api/login/{id}";
+        var httpResponse = await delet.DeleteAsync(apiName);
+        if (httpResponse.IsSuccessStatusCode)
+        {
+            mensagem = $"Usuário {deletUsuario} apagado do banco de dados.";
+        }
+    }
 }
-<h1 class="text-center">Em processo de manutenção...</h1>
