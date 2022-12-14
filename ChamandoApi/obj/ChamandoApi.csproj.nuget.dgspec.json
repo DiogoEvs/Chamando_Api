@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\diogo\\Documents\\Projetos VSCode\\Chamando_Api\\Chamando_Api\\ChamandoApi\\ChamandoApi.csproj": {}
+    "C:\\Users\\diogo\\Documents\\Projetos VSCode\\Chamando_Api\\ChamandoApi\\ChamandoApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\diogo\\Documents\\Projetos VSCode\\Chamando_Api\\Chamando_Api\\ChamandoApi\\ChamandoApi.csproj": {
+    "C:\\Users\\diogo\\Documents\\Projetos VSCode\\Chamando_Api\\ChamandoApi\\ChamandoApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\diogo\\Documents\\Projetos VSCode\\Chamando_Api\\Chamando_Api\\ChamandoApi\\ChamandoApi.csproj",
+        "projectUniqueName": "C:\\Users\\diogo\\Documents\\Projetos VSCode\\Chamando_Api\\ChamandoApi\\ChamandoApi.csproj",
         "projectName": "ChamandoApi",
-        "projectPath": "C:\\Users\\diogo\\Documents\\Projetos VSCode\\Chamando_Api\\Chamando_Api\\ChamandoApi\\ChamandoApi.csproj",
+        "projectPath": "C:\\Users\\diogo\\Documents\\Projetos VSCode\\Chamando_Api\\ChamandoApi\\ChamandoApi.csproj",
         "packagesPath": "C:\\Users\\diogo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\diogo\\Documents\\Projetos VSCode\\Chamando_Api\\Chamando_Api\\ChamandoApi\\obj\\",
+        "outputPath": "C:\\Users\\diogo\\Documents\\Projetos VSCode\\Chamando_Api\\ChamandoApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\diogo\\AppData\\Roaming\\NuGet\\NuGet.Config",

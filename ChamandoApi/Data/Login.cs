@@ -12,5 +12,5 @@ public class Login
     public string? Senha { get; set; }
 
     [JsonProperty("DataCriacao")]
-    public DateTime DataCriacao { get; set; } = DateTime.Now;
+    public DateTime DataCriacao { get; set; } 
 }

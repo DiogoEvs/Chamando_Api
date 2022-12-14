@@ -37,6 +37,14 @@
 	<div class="row" style="margin:10px; margin-bottom:50px;">
 		<div class="col"><button class="btn btn-info" @onclick="GetUser">Listar Usuários</button></div>
 	</div>
+	<hr>
+	<div class="col-3">
+		Id:<input type="number" class="form-control" id="inputPassword2" placeholder="Id do Usuário" @bind="idUsuario">
+	</div>
+	<div class="row" style="margin:10px; margin-bottom:50px;">
+		<div class="col"><button class="btn btn-info" @onclick="()=>GetId(idUsuario)">Mostrar Usuário pelo Id</button>
+		</div>
+	</div>
 </div>
 
 @code {
@@ -53,4 +61,25 @@
 			StateHasChanged();
 		}
 	}
+	private int idUsuario;
+	Login mostrar = new Login();
+
+	private async void GetId(int id)
+	{
+		mostrar.Id = idUsuario;
+
+		var apiName = $"http://diogoestudante-001-site1.gtempurl.com/api/login/{id}";
+		var httpResponse = await client.GetAsync(apiName);
+		if (httpResponse.IsSuccessStatusCode)
+		{
+
+			GetUser();
+
+		}
+	}
 }
+<p>
+	O metodo puxar Usuário por "id" esta fucionando... Porém não puxa só um
+	Usuário em especifico puxa a tabela toda. Como o tempo de entrega já se
+	Esgotou vou entrega-lo assim. Desculpe (•ω•`)
+</p>

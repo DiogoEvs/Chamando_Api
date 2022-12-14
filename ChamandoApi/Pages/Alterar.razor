@@ -1,56 +1,70 @@
 @page "/alterar"
 @inject HttpClient put
-@inject MicroLabs.Pages.Services.AppData Lista
 @using VoeAirlines_Blazor.Data
 @using Newtonsoft.Json
 @using Data
 
-<!--<h3 class="text-center">Alterar</h3>
+<h3 class="text-center">Alterar</h3>
 
 <div class="col-3">
-    Id:<input type="number" class="form-control" id="inputPassword2" placeholder="Id" @bind="putId">
+    Id:<input type="number" class="form-control" id="inputId" placeholder="Id" @bind="putId">
 </div>
+<hr>
 <div class="col-3">
-    Usuário:<input type="text" class="form-control" id="inputPassword2" placeholder="Nome" @bind="putNome">
+    Usuário:<input type="text" class="form-control" id="inputUser" placeholder="Nome" @bind="putUsuario">
 </div>
 
 <div class="col-3">
-    Senha:<input type="password" class="form-control" id="inputPassword2" placeholder="Senha" @bind="putSenha">
+    Senha:<input type="password" class="form-control" id="inputPassword" placeholder="Senha" @bind="putSenha">
 </div>
 <br>
 <div class="mb-3">
-    <input type="date" class="form-control" id="inputPassword2" placeholder="Data de Alteração" @bind="putData">
+    <input type="date" class="form-control" id="inputDateTime" placeholder="Data de Alteração" @bind="putData">
 </div>
-
 <div class="col-3" style="margin-top:10px;">
-    <button type="submit" class="btn btn-primary mb-6" @onclick="()=>AlterarUsuario(putId, putNome, 
-    putSenha, putData)">confirmar acesso</button>
+    <button type="submit" class="btn btn-warning" @onclick="()=>AtualizarUsuario(putId, putUsuario, putSenha, 
+    putData)">Atualizar</button>
 </div>
 
-
+@mensagem
 
 @code {
 
-    /*private string? mensagem;
-    private int putId;
-    private string? putNome;
-    private string? putSenha;
-    private DateTime putData;
+    private string? mensagem;
+    public int putId;
+    public string? putUsuario;
+    public string? putSenha;
+    public DateTime putData;
 
     Login alterar = new Login();
-    public override async void AlterarUsuario(int id)
+
+    private async void AtualizarUsuario(int Id, string? Usuario, string? Senha, DateTime DataCriacao)
     {
 
         alterar.Id = putId;
-        alterar.Usuario = putNome;
+        alterar.Usuario = putUsuario;
         alterar.Senha = putSenha;
         alterar.DataCriacao = putData;
 
-        var apiName = $"http://diogoestudante-001-site1.gtempurl.com/api/login/{id}";
-        var httpResponse = await put.PutAsync(apiName);
-        if(httpResponse.IsSuccessStatusCode)
+        Id = alterar.Id;
+        Usuario = alterar.Usuario;
+        Senha = alterar.Senha;
+        DataCriacao = alterar.DataCriacao;
+
+        var users = new Login
         {
-            mensagem = $"Usuário atualizado com sucesso!{putId}_{putNome}_{putSenha}_{putData}";
+            Id = alterar.Id,
+            Usuario = alterar.Usuario,
+            Senha = alterar.Senha,
+            DataCriacao = alterar.DataCriacao
+        };
+        var apiName = $"http://diogoestudante-001-site1.gtempurl.com/api/login/{Id}";
+        var httpResponse = await put.PutAsJsonAsync<Login>(apiName, users);
+        if (httpResponse.IsSuccessStatusCode)
+        {
+            var putData = JsonConvert.SerializeObject(users);
+            var putResponse = await put.PutAsync(apiName, new StringContent(putData));
+            mensagem = $"Dados de: (Id: {alterar.Id} | Usuário: {alterar.Usuario}) Atualizados com sucesso!";
         }
-    }*/
-}-->
+    }
+}
